@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+
+    <title>Compete IT | Log In</title>
+</head>
+<body>
+<div id="app">
+    <div id="reg-container">
+        <header>
+            <a href="index.html"><img id="logo" src="../img/competeit-logo.svg" onclick=""></a>
+        </header>
+    </div>
+    </header>
+    <div id="registration-form">
+        <h1 style="margin-left:15px; font-weight:500">Вход</h1>
+        <form>
+            <input type="email" placeholder="Электронная почта" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit" onclick="LogIn()">Войти</button>
+            <h2>Нет учётной записи?<a href="Register.html"> Зарегистрироваться</a></h2>
+        </form>
+    </div>
+
+    <script>
+        function onSignIn(googleUser) {
+            // Useful data for your client-side scripts:
+            var profile = googleUser.getBasicProfile();
+            console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+            console.log('Full Name: ' + profile.getName());
+            console.log('Given Name: ' + profile.getGivenName());
+            console.log('Family Name: ' + profile.getFamilyName());
+            console.log("Image URL: " + profile.getImageUrl());
+            console.log("Email: " + profile.getEmail());
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            console.log("ID Token: " + id_token);
+        }
+    </script>
+</div>
+<script type="module" src="session-data.js"></script>
+
+</body>
+</html>

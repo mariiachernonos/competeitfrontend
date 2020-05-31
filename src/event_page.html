@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mainpage.css" type="text/css">
+    <link rel="stylesheet" href="../css/global.css" type="text/css">
+    <title>Compete IT | Main Page</title>
+</head>
+<body>
+<div id="app">
+    <header>
+            <a href="index.html"><img id="logo" src="../img/competeit-logo.svg" onclick=""></a>
+            <img id="notifications-area" src="../img/bell-blue.png">
+            <div id="user-profile" onclick="">
+                <a href="isLoggedIn ? 'Profile.html' : 'Register.html'" style="color:#ffffff;">
+                    <img v-if="!isLoggedIn" src="../img/user-blue.png">
+                    <p v-if="!isLoggedIn">Войти / Регистрация</p>
+                    <p v-else>{{user_name}}<!--vue goes there to value--></p>
+                </a>
+            </div>
+        </header>
+    <div id ='event-wrapper'>
+    </div>
+   </div>
+</body>
+<script src="../scripts/session-data.js"></script>
+<script>createEventPageMarkup(event);</script>
+</html>
