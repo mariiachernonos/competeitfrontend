@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+html {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 10px;
+    color: #0a0a0a;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #0a0a0a;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+h1 {
+    font-size: 3rem;
+    margin:20px 60px;
+    padding:0;
+}
+h2 {
+    font-size: 1.5rem;
+    padding-top: 2rem;
+}
+#app {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+}
+#top-mainpage-area {
+    height: 95vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    z-index: 100;
+}
+#top-mainpage-area h1 {
+    position: absolute;
+    top: 16rem;
+    left: 6rem;
+}
+.page-bg {
+    background: url("../img/main_page_bg.jpg") center no-repeat;
+    background-size: cover;
+    height: 95vh;
+    position: relative;
+    top:0;
+    left:0;
+    z-index: -10000;
+}
+/*Header*/
+header {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 5rem;
+    z-index: 1;
+    padding: 1rem;
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
+    align-self: flex-start;
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+}
+#logo:hover{
+    opacity:0.8;
+}
+
+#notifications-area {
+    height: 30px;
+    width: 30px;
+    margin-left: 80rem;
+    margin-right: 10rem;
+    position: absolute;
+    top: 5rem;
+    right: 20rem;
+}
+#notifications-area:hover{
+    opacity: 0.8;
+    transition: 0.2s ease-in;
+}
+
+#user-profile img {
+    position: absolute;
+    top: 5rem;
+    right: 17rem;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+#user-profile p{
+    font-size: 1rem;
+    position: absolute;
+    top: 6rem;
+    right: 5rem;
+}
+#user-profile:hover{
+    opacity: 0.8;
+    transition: 0.2s ease-in;
+}
+
+
+#all_events_area h1 {
+    margin: 2rem;
+}
+#wrapper {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    margin: 0 60px;
+}
+
+#event-carousel {
+    position: absolute;
+    top: 30rem;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-column-gap: 30px;
+    margin: 0 120px;
+}
+/******* EVENT *******/
+.event {
+    max-width: 400px;
+    max-height: 350px;
+    background: linear-gradient(#c0e0e0, #ffffff);
+    box-shadow: 5px 2px 5px rgba(196,196,196,0.2);
+    border-radius: 20px;
+    color: #0a0a0a;
+}
+.event:hover {
+    background: rgba(0,100,255,0.1);
+    transition: 0.3s ease-in-out;
+}
+.event img {
+    object-fit: cover;
+    width: 400px;
+    height:230px;
+    border-radius: 20px 20px 0 0;
+}
+.event .event-name {
+    margin: 5px 0 5px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.event .event-type {
+    margin: 0 15px;
+    padding: 0;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.event .event-date {
+    padding: 5px 10px;
+    margin: 20px 15px 20px 15px;
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 15px;
+    background: #1020ff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+    color: #ffffff;
+}
+#all_events_area {
+    color: #0a0a0a;
+    padding:  0 60px;
+    position: absolute;
+    top: 96vh;
+    left: 0;
+}
+
+#all_events_area h1 {
+    margin: 2rem;
+}
+#wrapper {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-flow: row;
+    grid-gap: 30px;
+    margin: 0 60px;
+}
+#filter-area {
+    display: flex;
+    height: 2rem;
+    margin: 4rem;
+    position: absolute;
+    top: 96vh;
+    left: 0;
+    z-index: 10000;
+}
+#reg-container {
+    background: url("../img/register-page.png") no-repeat;
+    background-position: 150px 150px;
+    background-size: 60vh;
+    height: 100vh;
+}
+#registration-form{
+    position: absolute;
+    top: 15rem;
+    right: 18rem;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    float: right;
+}
+#registration-form input{
+    width: 80%;
+    height: 5rem;
+    border-radius: 5px;
+    border: 2px solid rgb(91,108,255);
+    margin: 2rem;
+    padding: 1rem;
+}
+#registration-form button {
+    height: 4rem;
+    width: 80%;
+    color: #ffffff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 0 5rem;
+    background: rgb(91,108,255);
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    margin: 2rem;
+}
+#registration-form button:hover{
+    background: #1020ff;
+}
+#registration-form h2 {
+    width: 80%;
+    text-align:center;
+    margin: 0 2rem;
+}
+#registration-form h2 > a {
+    color: #5B6CFF;
+}
+#registration-form h2 > a:hover{
+    color: #1020ff;
+}
