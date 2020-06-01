@@ -3,8 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/ads.css">
 </head>
 <body>
+<div id="app">
+    <header>
+        <a href="LogIn.html"><img id="logo" src="../img/competeit-logo.svg" onclick=""></a>
+        <img id="notifications-area" src="../img/bell-blue.png">
+        <div id="user-profile" onclick="">
+            <a href = 'Register.html' style="color:#ffffff;">
+                <img id="loginstatus-img" src="../img/user-blue.png">
+                <p id="loginstatus-name">Войти / Регистрация</p>
+            </a>
+        </div>
+    </header>
+    <div id="ad-entering">
+        <input id="write-team-request" type="text">
+        <button id="submit-team-request" type="submit"><img src="../img/plane.svg"></button>
+    </div>
+    <div id="ads-area">
+        <div class="ad">
+            <div class="ad-header">
+                <img src="../img/user-blue.png">
+                <p>{{username}}</p>
+            </div>
+            <p class="ad-text"></p>
+            <p class="ad-date"></p>
+        </div>
+        <div class="ad">
+            <div class="ad-header">
+                <img src="../img/user-blue.png">
+                <p>{{username}}</p>
+            </div>
+            <p class="ad-text"></p>
+            <p class="ad-date"></p>
+        </div>
+        <div class="ad">
+            <div class="ad-header">
+                <img src="../img/user-blue.png">
+                <p>{{username}}</p>
+            </div>
+            <p class="ad-text"></p>
+            <p class="ad-date"></p>
+        </div>
+        <div class="ad">
+            <div class="ad-header">
+                <img src="../img/user-blue.png">
+                <p>{{username}}</p>
+            </div>
+            <p class="ad-text"></p>
+            <p class="ad-date"></p>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

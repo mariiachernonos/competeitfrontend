@@ -35,6 +35,26 @@ h2 {
     font-size: 1.5rem;
     padding-top: 2rem;
 }
+.center {
+    text-align: center;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
 #app {
     width: 100%;
     margin: auto;
@@ -157,7 +177,7 @@ header {
     color: #0a0a0a;
 }
 .event:hover {
-    background: rgba(0,100,255,0.1);
+    background: rgb(152, 167, 214);
     transition: 0.3s ease-in-out;
 }
 .event img {
@@ -193,8 +213,9 @@ header {
 #all_events_area {
     color: #0a0a0a;
     padding:  0 60px;
+    margin: 10rem 0;
     position: absolute;
-    top: 96vh;
+    top: 103vh;
     left: 0;
 }
 
@@ -209,10 +230,17 @@ header {
     grid-gap: 30px;
     margin: 0 60px;
 }
+#filter-area h1 {
+    margin: 2rem 12rem;
+}
 #filter-area {
-    display: flex;
-    height: 2rem;
-    margin: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background:rgba(0,100,255,0.33);
+    height: 12rem;
+    margin: 1rem 0;
+    padding: 2rem;
     position: absolute;
     top: 96vh;
     left: 0;
